@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>mail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="intern" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="intern-map-large" transform="translate(-114.000000, -2258.000000)" fill="#4DB7FE" fill-rule="nonzero">
+            <g id="Group-8" transform="translate(-277.500000, 1716.000000)">
+                <g id="container-footer_widgets-before-reset-after-reset" transform="translate(372.500000, 277.000000)">
+                    <g id="row-fwids-row-before-reset-after-reset" transform="translate(0.500000, 0.000000)">
+                        <g id="dynamic-footer-widget-col-sm-12-col-md-4" transform="translate(4.000000, 190.000479)">
+                            <g id="LI" transform="translate(0.000000, 61.000000)">
+                                <g id="SPAN" transform="translate(14.000000, 14.000000)">
+                                    <g id="fal-fa-envelope-before-reset">
+                                        <g id="SPAN">
+                                            <g id="mail" transform="translate(0.829787, 0.000000)">
+                                                <path d="M14.4255319,0 C15.4311246,0 16.2581676,0.77915762 16.3346534,1.76546534 L16.3404255,1.91489362 L16.3404255,10.0851064 C16.3404255,11.0906991 15.5612679,11.9177421 14.5749602,11.9942278 L14.4255319,12 L1.91489362,12 C0.909300912,12 0.0822579244,11.2208424 0.00577218121,10.2345347 L0,10.0851064 L0,1.91489362 C0,0.909300912 0.77915762,0.0822579244 1.76546534,0.00577218121 L1.91489362,0 L14.4255319,0 Z M15.063,2.306 L8.17021277,7.43380851 L1.276,2.306 L1.27659574,10.0851064 C1.27659574,10.4050677 1.51324072,10.6708001 1.82069792,10.7164707 L1.91489362,10.7234043 L14.4255319,10.7234043 C14.7454932,10.7234043 15.0112256,10.4867593 15.0568963,10.1793021 L15.0638298,10.0851064 L15.063,2.306 Z M14.308,1.276 L2.031,1.276 L8.17021277,5.84278723 L14.308,1.276 Z"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
