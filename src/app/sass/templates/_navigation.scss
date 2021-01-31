@@ -32,7 +32,7 @@
   }
   .navbar-item.is-niv1 {
     > a {
-      background:$white;
+      background:$white ;
       color:$skyblue;
       &:hover {
         background:$danube;
@@ -41,6 +41,13 @@
     }
     &.has-dropdown {
       align-items: center;
+    }
+  }
+  .is-hoverable {
+    &:hover {
+      > a.navbar-link {
+        color:$white !important;
+      }
     }
   }
 }

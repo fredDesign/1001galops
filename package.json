@@ -10,7 +10,7 @@
     "build": "ELEVENTY_ENV=production yarn eleventy:default",
     "serve": "eleventy --serve",
     "prod": "run-s statics:prod build",
-    "cpstatic": "npm-run-all clean mk:webapp_statics cp::js cp::fonts ",
+    "cpstatic": "npm-run-all clean mk:webapp_statics  cp::fonts ",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf ./_site",
     "cleanstatic": "rimraf ./_site/webapp_statics/js && rimraf ./_site/webapp_statics/fonts ",
@@ -25,11 +25,11 @@
     "scripts:prod": "webpack --mode=production",
     "mk:statics": "mkdirp ./_site && mkdirp ./_site/statics && mkdirp ./_site/statics/js && mkdirp ./_site/statics/fonts",
     "mk:static": "mkdirp ./_site/statics/js && mkdirp ./_site/statics/fonts",
-    "cp:js": "ncp ./src/assets/js/ ./_site/statics/js/",
-    "cp:fonts": "ncp ./src/assets/fonts/ ./_site/statics/fonts/",
-    "dev": "npm-run-all clean mk:statics cp::js cp::fonts styles:dev scripts:watch  eleventy:default --parallel  eleventy:watch serve --print-label",
+    "cp:js": "ncp ./src/statics/js/ ./_site/statics/js/",
+    "cp:fonts": "ncp ./src/statics/fonts/ ./_site/statics/fonts/",
+    "dev": "npm-run-all clean mk:statics cp::fonts styles:dev scripts:watch  eleventy:default --parallel  eleventy:watch serve --print-label",
     "dev:debug": "DEBUG=* npm run dev",
-    "builder": "run-s clean mk:statics cp::js cp::fonts styles:prod scripts:prod eleventy:default --print-label",
+    "builder": "run-s clean mk:statics  cp::fonts styles:prod scripts:prod eleventy:default --print-label",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {
@@ -62,6 +62,7 @@
     "css-loader": "^5.0.1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
+    "gsap": "^3.6.0",
     "luxon": "^1.25.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
@@ -73,6 +74,9 @@
     "postcss-cli": "^8.0.0",
     "shufflejs": "^5.2.3",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "locomotive-scroll": "^4.0.6"
+  },
+  "dependencies": {
   }
 }

@@ -4,7 +4,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 120vh;
   @include until ($tablet)  {
     overflow: hidden;
     height: 90vh;
@@ -12,12 +11,10 @@
 
   @include until ($widescreen)  {
     overflow: hidden;
-    height: 120vh;
   }
 
   @include from ($widescreen)  {
     overflow: hidden;
-    height: 120vh;
   }
 
   h1 {
@@ -39,20 +36,7 @@
     }
   }
 
-  &::after {
-    content:'';
-    width: 100%;
-    height: 49px;
-    background-image: url('../images/backgrounds/wave1.png');
-    background-position: bottom center;
-    background-repeat: repeat-x;
-    display: block;
-    position: absolute;
-    z-index: 10;
-    pointer-events: none;
-    bottom: 0;
-    left: 0;
-  }
+
 
    .scroll-item {
      position: absolute;
@@ -101,7 +85,7 @@
 
 .layer-bg {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 0;
   width: 100%;
   height: 100%;
