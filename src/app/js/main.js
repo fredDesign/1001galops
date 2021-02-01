@@ -77,19 +77,47 @@ window.addEventListener("load", function () {
   let  tl = gsap.timeline();
   // Pinning and horizontal scrolling
 
-  gsap.to(".pin-wrap", {
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      scrub: true,
-      trigger: "#sectionPin",
-      pin: true,
-      // anticipatePin: 1,
-      start: "top top",
-      end: pinWrapWidth
+
+
+
+  const mql = window.matchMedia('(min-width: 1024px)');
+
+
+  ScrollTrigger.matchMedia({
+    "(max-width: 959px)": () => {
+      gsap.to(".pin-wrap", {
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          scrub: true,
+          trigger: "#sectionPin",
+          pin: true,
+          // anticipatePin: 1,
+          start: "top top",
+          end: "top bottom"
+        },
+        ease: "none"
+      });
     },
-    x: -horizontalScrollLength,
-    ease: "none"
+    "(min-width: 960px)": () => {
+      gsap.to(".pin-wrap", {
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          scrub: true,
+          trigger: "#sectionPin",
+          pin: true,
+          // anticipatePin: 1,
+          start: "top top",
+          end: pinWrapWidth
+        },
+        x: -horizontalScrollLength,
+        ease: "none"
+      });
+    },
   });
+
+
+
+
   gsap.to('.ring--one', {
     x: -200,
     ease: "none",

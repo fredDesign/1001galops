@@ -32,8 +32,8 @@
   }
   .navbar-item.is-niv1 {
     > a {
-      background:$white ;
-      color:$skyblue;
+      background:transparent ;
+      color:$lightbrown;
       &:hover {
         background:$danube;
         color: $white;

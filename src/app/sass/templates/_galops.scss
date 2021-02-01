@@ -23,7 +23,7 @@ $logowr: (  $fullhd:180px, $widescreen: 160px,$desktop: 140px,$tablet: 140px );
 // sass/scss
 
 .column.is-logo {
-  width: 60vh;
+  width: 70vh;
 }
 .navbar-brand {
   .navbar-item {
@@ -316,8 +316,10 @@ section:not(#sectionPin) {
   overflow: hidden;
   display: flex;
   left: 0;
-  background: var(--text-color);
-  color: var(--bg-color);
+  @include until ($desktop) {
+  height:auto;
+    flex-direction: column;
+  }
 }
 
 .pin-wrap {
@@ -327,6 +329,10 @@ section:not(#sectionPin) {
   align-items: center;
   padding: 50px 10vw;
 
+  @include until ($desktop) {
+    height:auto;
+    flex-direction: column;
+  }
   & > * {
     min-width: 60vw;
     padding: 0 5vw;
@@ -360,4 +366,10 @@ section:not(#sectionPin) {
     top: -48px;
     left: 0;
   }
+}
+
+
+///footer
+.footer {
+  padding: 0;
 }

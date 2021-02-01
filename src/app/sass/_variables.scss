@@ -61,6 +61,7 @@ $matisse:#225EAA;
 $strongblue:#0088CB;
 $deepblue:#2E3782;
 $light-sky:#F0FBFE;
+$lightbrown:#c77231;
 $pink: #EB1D59;
 $lightpink:#EAADC1;
 $brown: #757763;
@@ -69,11 +70,28 @@ $beige-lighter: #EFF0EB;
 $grey-light: #CCCCCC;
 $light-gray:#F6F6F8;
 
+$warning: $strongblue !default
+$success: $lightbrown !default
+$danger: $pink !default
+
+$grey-darker:  hsl(0, 0%, 21%) !default
+$grey-dark:    hsl(0, 0%, 29%) !default
+$grey:         hsl(0, 0%, 48%) !default
+$grey-light:   hsl(0, 0%, 71%) !default
+$grey-lighter: hsl(0, 0%, 86%) !default
+$grey-lightest: hsl(0, 0%, 93%) !default
+
+$white-ter:    hsl(0, 0%, 96%) !default
+$white-bis:    hsl(0, 0%, 98%) !default
+$white:        hsl(0, 0%, 100%) !default
+
+$light: $white-ter !default
+$dark: $grey-darker !default
 
 // Update Bulma's global variables
 $grey-dark: $brown;
 $grey-light: $beige-light;
-$primary: $picblue;
+$primary: $lightbrown;
 $link: $picblue;
 $info:$picblue;
 // Update some of Bulma's component variables
@@ -91,9 +109,38 @@ $border-color: #c7c7c7;
 $black: #000;
 $white: #fff;
 $gray: #eaeaea;
+$trans: #ffffff00;
 $navbar-item-color: lighten($text-color-dark, 30%);
 $navbar-item-color: $black;
 
+
+
+////
+
+$light-invert: findColorInvert($light) ;
+$dark-invert: findColorInvert($dark) ;
+$primary-invert :findColorInvert($primary-color);
+$primary-light: findLightColor($primary) ;
+$primary-dark: findDarkColor($primary) ;
+$link-invert: findColorInvert($link) ;
+$link-light: findLightColor($link) ;
+$link-dark: findDarkColor($link) ;
+
+$info-invert: findColorInvert($info) ;
+$info-light: findLightColor($info) ;
+$info-dark: findDarkColor($info) ;
+$success-invert: findColorInvert($success) ;
+$success-light: findLightColor($success) ;
+$success-dark: findDarkColor($success) ;
+$warning-invert: findColorInvert($warning) ;
+$warning-light: findLightColor($warning) ;
+$warning-dark: findDarkColor($warning) ;
+$danger-invert: findColorInvert($danger) ;
+$danger-light: findLightColor($danger) ;
+$danger-dark: findDarkColor($danger) ;
+$light-invert: findColorInvert($light) ;
+$dark-invert: findColorInvert($dark) ;
+////
 
 $navbar-background-color:$white;
 $navbar-item-hover-color:$primary-color;
@@ -103,7 +150,7 @@ $navbar-height: 5rem !default
 $navbar-padding-vertical: 1rem !default
 $navbar-padding-horizontal: 2rem !default
 
-$agoracolors: ("navagora": (lighten($skyblue, 5%), $havblue), "bluetrans": ($strongblue, $white), "pastblue": ($pastblue, $black), "lightpink": ($lightpink, $black), "topblue": ($topblue, $black));
+$agoracolors: ("navcol": ($lightbrown, $trans),"navagora": (lighten($lightbrown, 5%), $lightbrown), "bluetrans": ($strongblue, $white), "pastblue": ($pastblue, $black), "lightpink": ($lightpink, $black), "topblue": ($topblue, $black));
 $custom-colors:$agoracolors;
 
 $widescreen-enabled: true;
@@ -150,3 +197,6 @@ $radius-big : 30px;
 
 
 //gradient
+
+
+//colors
