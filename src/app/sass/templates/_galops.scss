@@ -24,6 +24,7 @@ $logowr: (  $fullhd:180px, $widescreen: 160px,$desktop: 140px,$tablet: 140px );
 
 .column.is-logo {
   width: 70vh;
+  max-width: 100%;
 }
 .navbar-brand {
   .navbar-item {
@@ -372,4 +373,5 @@ section:not(#sectionPin) {
 ///footer
 .footer {
   padding: 0;
+
 }

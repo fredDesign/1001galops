@@ -112,70 +112,71 @@ window.addEventListener("load", function () {
         x: -horizontalScrollLength,
         ease: "none"
       });
+      gsap.to('.ring--one', {
+        x: -200,
+        ease: "none",
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          trigger: ".ring--one",
+          start: "top center",
+          end: +2000,
+          scrub: true
+        }
+      })
+      gsap.to('.ring--two', {
+        x: -200,
+        ease: "none",
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          trigger: document.querySelectorAll(".ring--two")[0].parentNode,
+          start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/4),
+          end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/3.5),
+          scrub: 1
+        }
+      })
+
+      gsap.to('.ring--three', {
+        x: -200,
+        ease: "none",
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          trigger: document.querySelectorAll(".ring--three")[0].parentNode,
+          start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/2.5),
+          end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/2),
+          scrub: 1
+        }
+      })
+
+      gsap.to('.ring--four', {
+        x: -200,
+        ease: "none",
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          trigger: document.querySelectorAll(".ring--four")[0].parentNode,
+          start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.5),
+          end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.2),
+          scrub: 1
+        }
+      })
+
+      gsap.to('.ring--five', {
+        x: -200,
+        ease: "none",
+        scrollTrigger: {
+          scroller: pageContainer, //locomotive-scroll
+          trigger: document.querySelectorAll(".ring--five")[0].parentNode,
+          start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.15),
+          end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.05),
+          scrub: 1
+        }
+      })
     },
   });
 
 
 
 
-  gsap.to('.ring--one', {
-    x: -200,
-    ease: "none",
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      trigger: ".ring--one",
-      start: "top center",
-      end: +2000,
-      scrub: true
-    }
-  })
-  gsap.to('.ring--two', {
-    x: -200,
-    ease: "none",
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      trigger: document.querySelectorAll(".ring--two")[0].parentNode,
-      start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/4),
-      end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/3.9),
-      scrub: 1
-    }
-  })
 
-  gsap.to('.ring--three', {
-    x: -200,
-    ease: "none",
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      trigger: document.querySelectorAll(".ring--three")[0].parentNode,
-      start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/2),
-      end: +3000,
-      scrub: 1
-    }
-  })
-
-  gsap.to('.ring--four', {
-    x: -200,
-    ease: "none",
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      trigger: document.querySelectorAll(".ring--four")[0].parentNode,
-      start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.5),
-      end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.4),
-      scrub: 1
-    }
-  })
-
-  gsap.to('.ring--five', {
-    x: -200,
-    ease: "none",
-    scrollTrigger: {
-      scroller: pageContainer, //locomotive-scroll
-      trigger: document.querySelectorAll(".ring--five")[0].parentNode,
-      start: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.15),
-      end: document.getElementById('sectionPin').offsetTop  + (pinWrapWidth/1.05),
-      scrub: 1
-    }
-  })
 
   const balades= document.getElementById('balade');
   //const apprendre= document.getElementById('apprendre');
@@ -187,7 +188,7 @@ window.addEventListener("load", function () {
 
   document.querySelectorAll(".anchor__balade").forEach((button) => {
     button.addEventListener('click', (event) => {
-      scroller.scrollTo(balades );event.preventDefault();
+      scroller.scrollTo(balades.offsetTop +  (pinWrapWidth/16));event.preventDefault();
     });
   });
   document.querySelectorAll(".anchor__apprendre").forEach((button) => {
