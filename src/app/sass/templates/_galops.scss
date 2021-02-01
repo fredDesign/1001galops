@@ -345,6 +345,9 @@ section:not(#sectionPin) {
 }
 .tmpl-home.container {
   max-width: 100vw !important;
+  @include until ($desktop) {
+    overflow: hidden !important;
+  }
 }
 .has-background-sky {background: linear-gradient(to bottom, #eef5f8 50%, #FFF)}
 
