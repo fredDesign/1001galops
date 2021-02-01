@@ -6,8 +6,8 @@ import { convertImages } from './modules/_svginline.js'
 //import VueSplide from '@splidejs/vue-splide'
 import LocomotiveScroll from 'locomotive-scroll';
 
-import { gsap, ScrollTrigger,ScrollToPlugin, MotionPathPlugin,CSSRulePlugin } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin,MotionPathPlugin,CSSRulePlugin);
+import { gsap, ScrollTrigger,ScrollToPlugin,TweenMax,TimelineMax, MotionPathPlugin,CSSRulePlugin } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin,TimelineMax,TweenMax,MotionPathPlugin,CSSRulePlugin);
 
 //Vue.use(VueSplide)
 
@@ -231,7 +231,36 @@ window.addEventListener("load", function () {
 
   ScrollTrigger.refresh();
 });
+
 //////
+
+////slice crossfade
+var arrImg = []
+var imgs = document.getElementsByClassName('slideImg')
+for (var i = 0; i < imgs.length; i++) {
+  var imgx = imgs[i];
+  arrImg.push(imgx);
+};
+var next = 5; // time to change
+
+function crossfade(){
+
+  var action = new TimelineMax()
+    .to(arrImg[0], 1, {autoAlpha:0})
+    .to(arrImg[1], 1, {autoAlpha:1},0)
+
+  arrImg.push( arrImg.shift() );
+  // start endless run
+  TweenMax.delayedCall(next, crossfade);
+}
+console.log(arrImg);
+gsap.set(arrImg[0], {opacity: 0});
+// start the crossfade after next = 3 sec
+TweenMax.delayedCall(next, crossfade);
+
+//////
+
+
 run()
 
 

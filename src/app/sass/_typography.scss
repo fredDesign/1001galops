@@ -42,6 +42,20 @@ h1, .h1{
   }
 }
 
+.title.is-1 {
+  @include mobile {
+    font-size: 2.5rem;
+  }
+  @include desktop {
+    font-size: 2.75rem;
+  }
+  @include widescreen {
+
+  }
+  @include fullhd {
+
+  }
+}
 h2, .h2{
   font-size: 32px;
   @include desktop {
@@ -65,6 +79,21 @@ h3, .h3{
   }
   @include fullhd {
     font-size:30px;
+  }
+}
+
+.title.is-3 {
+  @include mobile {
+    font-size: 1.5rem;
+  }
+  @include desktop {
+    font-size: 1.75rem;
+  }
+  @include widescreen {
+
+  }
+  @include fullhd {
+
   }
 }
 
