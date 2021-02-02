@@ -441,3 +441,11 @@ section#welcome {
     max-width: 100%;
   }
 }
+figure,.slide-image {
+  img {
+    border-radius: 1rem;
+    @include from ($desktop) {
+      border-radius: 2rem;
+    }
+  }
+}
