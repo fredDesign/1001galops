@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
+
     <link rel="stylesheet" href="{{ '/statics/css/app.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
@@ -25,6 +26,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/statics/images/fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/statics/images/fav/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/statics/images/fav/favicon-16x16.png">
+    <link rel="shortcut icon" href="/statics/images/fav/favicon.ico">
     <link rel="manifest" href="/statics/images/fav/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
