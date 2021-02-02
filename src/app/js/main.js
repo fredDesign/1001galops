@@ -253,7 +253,6 @@ function crossfade(){
   // start endless run
   TweenMax.delayedCall(next, crossfade);
 }
-console.log(arrImg);
 gsap.set(arrImg[0], {opacity: 0});
 // start the crossfade after next = 3 sec
 TweenMax.delayedCall(next, crossfade);
