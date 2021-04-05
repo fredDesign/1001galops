@@ -150,7 +150,7 @@ $navbar-height: 5rem !default
 $navbar-padding-vertical: 1rem !default
 $navbar-padding-horizontal: 2rem !default
 
-$agoracolors: ("navcol": ($lightbrown, $trans),"navagora": (lighten($lightbrown, 5%), $lightbrown), "bluetrans": ($strongblue, $white), "pastblue": ($pastblue, $black), "lightpink": ($lightpink, $black), "topblue": ($topblue, $black));
+$agoracolors: ("navcol": ($lightbrown, $trans),"navagora": (lighten($lightbrown, 5%), $lightbrown,$white), "bluetrans": ($strongblue, $white), "pastblue": ($pastblue, $black), "lightpink": ($lightpink, $black), "topblue": ($topblue, $black));
 $custom-colors:$agoracolors;
 
 $widescreen-enabled: true;
@@ -170,8 +170,8 @@ $icon-font: 'themify';
 $family-secondary:$tertiary-font;
 //card
 //$card-color: $text !default;
-$card-background-color: $light-sky;
-$card-shadow: 0 0px 1px 1px rgba($brown, 0.1), 0 0px 0 1px rgba($primary-color, 0.02);
+$card-background-color: $white;
+$card-shadow: 0 0px 10px 0px rgba($brown, 0.4), 0 0px 0 5px rgba($primary-color, 0.02);
 $card-radius: 0.25rem !default;
 $card-overflow: hidden !default;
 

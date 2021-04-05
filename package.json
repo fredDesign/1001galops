@@ -5,7 +5,6 @@
   "scripts": {
     "statics": "run-p styles:dev styles:watch scripts:watch ",
     "statics:prod": "run-p styles:prod scripts:prod ",
-    "start": "run-p cpstatic styles:dev serve styles:watch scripts:watch",
     "watch": "run-p serve styles:watch scripts:watch",
     "build": "ELEVENTY_ENV=production yarn eleventy:default",
     "serve": "eleventy --serve",

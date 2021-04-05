@@ -35,17 +35,10 @@
   </head>
   <body class="is-preload">
   <div id="wrapper" {% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
-    {% block navtop %}
     {% include 'navigation.njk' %}
-    {% endblock %}
-
-    {% block herotop %}
-    {% include 'hero-top.njk' %}
-    {% endblock %}
-
-
+    <div class="" id="intern_container">
       {{ content | safe }}
+    </div>
     {% include 'footer.njk' %}
 
     </div>

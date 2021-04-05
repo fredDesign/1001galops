@@ -1,12 +1,8 @@
 
 
-{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/
-<ul class="nav">
-  {%- for entry in collections.all | eleventyNavigation %}
-    <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-  {%- endfor %}
-</ul>
-#}
+{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/#}
+
+
 <nav class="navbar  is-navagora  is-navcol is-spaced is-fixed-top" role="navigation" aria-label="main navigation ">
   <div class="navbar-brand">
     <a class="navbar-item" href="{{ '/' | url }}">
@@ -27,12 +23,12 @@
       </div>-->
 
 
+        {%- for entry in collections.all | eleventyNavigation  %}
+          <div class="navbar-item is-niv1 has-dropdown  {% if entry.url == page.url %} is-active{% endif %} {{  entry.title | slug  }}Navitem"  ><a class="navbar-link is-arrowless {{  entry.title | slug  }}" href="{{ entry.url | url }}">{{ entry.title }}</a></div>
+        {%- endfor %}
 
 
-
-
-
-      <div class="navbar-item is-niv1 has-dropdown is-hoverable">
+{#-<div class="navbar-item is-niv1 has-dropdown is-hoverable">
         <a class="navbar-link anchor__balade">
           Balades/Rando
         </a>
@@ -117,9 +113,9 @@
         </a>
 
 
-      </div>
-    </div>
+      </div>#}
 
+    </div>
 
   </div>
 </nav>

@@ -1,24 +1,10 @@
-<!DOCTYPE HTML>
+---
+layout: layouts/base_intern.njk
+templateClass: tmpl-intern container
+---
 
-<html>
 
-  {% include 'header.njk' %}
 
-  <body class="is-preload">
 
-    <div id="wrapper">
+{{ content | safe }}
 
-      {% include 'navigation.njk' %}
-      {% include 'hero-top_intern.njk' %}
-
-      {{ content | safe }}
-
-      {% include 'footer.njk' %}
-
-    </div>
-
-  {% include 'scripts.njk' %}
-
-</body>
-
-</html>

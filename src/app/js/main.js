@@ -69,6 +69,8 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 
 ////////////////////////////////////
 ////////////////////////////////////
+let pinWrap = document.querySelector(".pin-wrap");
+if  (pinWrap != null) {
 window.addEventListener("load", function () {
   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
   let pinWrap = document.querySelector(".pin-wrap");
@@ -231,7 +233,7 @@ window.addEventListener("load", function () {
 
   ScrollTrigger.refresh();
 });
-
+}
 //////
 
 ////slice crossfade
@@ -243,7 +245,20 @@ for (var i = 0; i < imgs.length; i++) {
 };
 var next = 5; // time to change
 
-function crossfade(){
+if (arrImg.length>0 ) {
+  let totIm=arrImg.length;
+  let ind = 0;
+
+  for(var i = 0; i < arrImg.length; i++) {
+    arrImg[i].style.zIndex = totIm - ind;
+    console.log(arrImg)
+
+    ind += 1;
+    console.log(totIm - ind);
+  }
+}
+
+  function crossfade(){
 
   var action = new TimelineMax()
     .to(arrImg[0], 1, {autoAlpha:0})
@@ -253,7 +268,6 @@ function crossfade(){
   // start endless run
   TweenMax.delayedCall(next, crossfade);
 }
-gsap.set(arrImg[0], {opacity: 0});
 // start the crossfade after next = 3 sec
 TweenMax.delayedCall(next, crossfade);
 

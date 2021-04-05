@@ -15,27 +15,10 @@
       <div class="column is-12 is-9-desktop">
 
         <nav class="level is-online my-4">
-          <div class="level-item   has-text-left">
-              <a class="heading is-size-7">Home</a>
-          </div>
-          <div class="level-item has-text-left">
-            <a class="heading is-size-7 anchor__balade">Balades/Rando</a>
-          </div>
-          <div class="level-item  has-text-left">
-              <a class="heading is-size-7 anchor__apprendre" >Cours</a>
-          </div>
-          <div class="level-item  has-text-left">
-              <a class="heading is-size-7 anchor__apprendre anchor__travail" >Travail du cheval</a>
-          </div>
-          <div class="level-item has-text-left">
-              <a class="heading is-size-7 anchor__club">Club</a>
-          </div>
-          <div class="level-item has-text-left">
-              <a class="heading is-size-7 anchor__evenement">Evenementiel</a>
-          </div>
-          <div class="level-item has-text-left">
-              <a class="heading is-size-7 anchor__contact">Entrer en Contact</a>
-          </div>
+          {%- for entry in collections.all | eleventyNavigation  %}
+            <div class="level-item   has-text-left {% if entry.url == page.url %} is-active{% endif %} {{  entry.title | slug  }}Footitem"  ><a class="heading is-size-7 {{  entry.title | slug  }}" href="{{ entry.url | url }}">{{ entry.title }}</a></div>
+          {%- endfor %}
+
         </nav>
 
       </div>
