@@ -2,6 +2,7 @@
 ///////   navigation theme  ///////
 ///////                     ///////
 
+
 $goldenratio: 1.618;
 $logow: 235px;
 $logoratio:0.708;
@@ -18,7 +19,7 @@ $logowr: (  $fullhd:180px, $widescreen: 160px,$desktop: 140px,$tablet: 140px );
   }
 }
 
-.test {width:0px;}
+.html,body * {-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); }
 //////////////
 // sass/scss
 
@@ -466,11 +467,16 @@ section#welcome {
     max-width: 100%;
   }
   &.banner {
-    padding-bottom:40%;
+    padding-bottom:60%;
     overflow: hidden;
     border-radius: 2rem;
     margin-bottom:2rem;
     box-shadow: 0 22px 44px rgba(0,0,0,0.4);
+
+    @include from ($desktop) {
+      padding-bottom:40%;
+
+    }
     .slideImg {
       transform: translate(0, -50%);
       top: 50%;
@@ -495,7 +501,10 @@ section#welcome {
   margin: 0 !important;
 }
 #intern_container {
-  padding-top: 8rem;
+  pading-top:2rem;
+  @include from ($desktop) {
+    padding-top: 8rem;
+  }
 }
 .containerInt {
   padding: 50px 10vw 0;
