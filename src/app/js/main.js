@@ -41,13 +41,18 @@ const pageContainer = document.querySelector(".container");
 
 
 /* SMOOTH SCROLL */
+
 const scroller = new LocomotiveScroll({
   el: pageContainer,
   smooth: true
 });
 
+scroller.destroy()
 
-
+setTimeout(function(){
+  scroller.init()
+}, 100);
+setInterval(() => scroller.update(), 1000);
 scroller.on("scroll", ScrollTrigger.update);
 
 ScrollTrigger.scrollerProxy(pageContainer, {
