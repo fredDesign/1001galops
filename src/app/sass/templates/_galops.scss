@@ -312,6 +312,13 @@ body {
     padding: 50px 10vw;
     margin: auto;
     place-items: center;
+    .fullgrid {
+      grid-column: span 2; text-align: center;
+      @include until ($desktop) {
+        grid-column: span 1
+      }
+    }
+
   }
 
   #sectionPin {
