@@ -1,141 +1,174 @@
 /*  typography */
 
-
 body {
-  line-height: 1.2;
-  font-family: $primary-font;
-  -webkit-font-smoothing: antialiased;
-  font-size: 15px;
-  color: $text-color;
+    line-height: 1.2;
+    font-family: $primary-font;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: $text-color;
 }
 
-p, .paragraph {
-  font-weight: 400;
-  color: $text-color;
-  font-size: 15px;
-  line-height: 1.8;
-  font-family: $primary-font;
-  &-lg{
-    font-size: 22px;
-  }
+p,
+.paragraph {
+    font-weight: 400;
+    color: $text-color;
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: $primary-font;
+    &-lg {
+        font-size: 22px;
+    }
 }
 
-h1,h2,h3,h4,h5,h6 {
-  color: $text-color-dark;
-  font-family: $secondary-font;
-  line-height: 1.2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $text-color-dark;
+    font-family: $secondary-font;
+    line-height: 1.2;
 }
 
-h1, .h1{
-  font-size: 32px;
-  @include mobile {
+h1,
+.h1 {
     font-size: 32px;
-  }
-  @include desktop {
-    font-size: 36px;
-  }
-  @include widescreen {
-    font-size: 42px;
-  }
-  @include fullhd {
-    font-size: 48px;
-  }
+    @include mobile {
+        font-size: 32px;
+    }
+    @include desktop {
+        font-size: 36px;
+    }
+    @include widescreen {
+        font-size: 42px;
+    }
+    @include fullhd {
+        font-size: 48px;
+    }
 }
 
 .title.is-1 {
-  @include mobile {
-    font-size: 2.5rem;
-  }
-  @include desktop {
-    font-size: 2.75rem;
-  }
-  @include widescreen {
-
-  }
-  @include fullhd {
-
-  }
-  &.is-intern-title {
-    line-height: 1.4em;
-    font-size: 1.5rem;
     @include mobile {
-      font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     @include desktop {
-      font-size: 1.75rem;
+        font-size: 2.75rem;
+    }
+    @include widescreen {}
+    @include fullhd {}
+    &.is-intern-title {
+        line-height: 1.4em;
+        font-size: 1.5rem;
+        @include mobile {
+            font-size: 1.5rem;
+        }
+        @include desktop {
+            font-size: 1.75rem;
+        }
+        @include widescreen {
+            font-size: 2rem;
+        }
+        @include fullhd {
+            font-size: 2.25rem;
+        }
+    }
+}
+
+.pin-wrap {
+    .title.is-1 {
+        font-size: 2rem;
+        @include mobile {
+            font-size: 2rem;
+        }
+        @include from ($desktop) {
+            font-size: 2.75rem;
+        }
+        @include widescreen {}
+        @include fullhd {}
+    }
+}
+
+.title.is-2 {
+    font-size: 1.5rem;
+    @include mobile {
+        font-size: 1.5rem;
+    }
+    @include from ($desktop) {
+        font-size: 2rem;
     }
     @include widescreen {
-      font-size: 2rem;
+        font-size: 2.5rem;
+    }
+    @include fullhd {}
+}
+
+h2,
+.h2 {
+    font-size: 32px;
+    @include desktop {
+        font-size: 36px;
+    }
+    @include widescreen {
+        font-size: 42px;
     }
     @include fullhd {
-      font-size: 2.25rem;
-
+        font-size: 48px;
     }
-  }
-}
-h2, .h2{
-  font-size: 32px;
-  @include desktop {
-    font-size: 36px;
-  }
-  @include widescreen {
-    font-size: 42px;
-  }
-  @include fullhd {
-    font-size: 48px;
-  }
 }
 
-h3, .h3{
-  font-size: 24px;
-  @include desktop {
+h3,
+.h3 {
     font-size: 24px;
-  }
-  @include widescreen {
-    font-size: 30px;
-  }
-  @include fullhd {
-    font-size:30px;
-  }
+    @include desktop {
+        font-size: 24px;
+    }
+    @include widescreen {
+        font-size: 30px;
+    }
+    @include fullhd {
+        font-size: 30px;
+    }
 }
 
 .title.is-3 {
-  @include mobile {
-    font-size: 1.5rem;
-  }
-  @include desktop {
-    font-size: 1.75rem;
-  }
-  @include widescreen {
-
-  }
-  @include fullhd {
-
-  }
+    @include mobile {
+        font-size: 1.5rem;
+    }
+    @include desktop {
+        font-size: 1.75rem;
+    }
+    @include widescreen {}
+    @include fullhd {}
 }
 
-h4, .h4{
-  font-size: 22px;
+h4,
+.h4 {
+    font-size: 22px;
 }
 
-h5, .h5{
-  font-size: 18px;
+h5,
+.h5 {
+    font-size: 18px;
 }
 
-h6, .h6{
-  font-size: 14px;
+h6,
+.h6 {
+    font-size: 14px;
 }
 
 .has-text-weight-black {
-  font-weight: 800;
+    font-weight: 800;
 }
 
 .has-text-underline {
-  text-decoration: underline;
+    text-decoration: underline;
 }
+
 .is-small {
-  font-size: 80%;
+    font-size: 80%;
 }
+
 .has-text-weight-light {
-  font-weight: 200;
+    font-weight: 200;
 }
