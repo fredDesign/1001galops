@@ -6,15 +6,17 @@ $logow: 235px;
 $logoratio:0.708;
 $logo-bubul-width: $logow * $goldenratio * $goldenratio;
 $logowr: ( $fullhd:180px, $widescreen: 160px, $desktop: 140px, $tablet: 140px);
-@each $screen,
-$logow in $logowr {
-    @media screen and (max-width: $screen - 1px) {
-        width: #{$logow};
-    }
-    @include until ($screen) {
-        height:#{$logow};
-    }
-}
+
+// @each $screen,
+// $logow in $logowr {
+//     @media screen and (max-width: $screen
+//     ) {
+//         width: #{$logow};
+//     }
+//     @include until ($screen) {
+//         height:#{$logow};
+//     }
+// }
 
 .html,
 body * {

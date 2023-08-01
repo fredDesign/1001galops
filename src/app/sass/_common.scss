@@ -510,8 +510,8 @@ textarea.input {
     border-radius: 0 0 $radius-big 0 !important;
     padding-left: $radius-big;
     padding-right: $radius-big;
-    padding-top: $radius-big/2;
-    padding-bottom: $radius-big/2;
+    padding-top:  calc($radius-big/2);
+    padding-bottom:  calc($radius-big/2);
     font-size: 0.75rem !important;
     z-index: 2;
 }

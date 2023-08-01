@@ -18,7 +18,7 @@ $bl-color-palette:  $colors !default;
   @each $name, $scheme in $bl-color-palette {
     $background: nth($scheme, 1);
     $colortxt: nth($scheme, 2);
-    &.is-bl-#{$name} {
+    .is-bl-#{$name} {
       background:$background ;
       color:  $colortxt;
       h1, h2, h3, h4, h5, h6,p {
