@@ -6,7 +6,7 @@
     "statics": "run-p styles:dev styles:watch scripts:watch ",
     "statics:prod": "run-p styles:prod scripts:prod ",
     "watch": "run-p serve styles:watch scripts:watch",
-    "build": "ELEVENTY_ENV=production yarn eleventy:default",
+    "build": "ELEVENTY_ENV=production npm run eleventy:default",
     "serve": "eleventy --serve",
     "prod": "run-s statics:prod build",
     "cpstatic": "npm-run-all clean mk:webapp_statics  cp::fonts ",
@@ -36,9 +36,9 @@
     "url": "git://github.com/11ty/eleventy-base-blog.git"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Fred",
+    "email": "frederic.leguluche@gmail.com",
+    "url": "https://1001galops.com/"
   },
   "license": "MIT",
   "bugs": {
